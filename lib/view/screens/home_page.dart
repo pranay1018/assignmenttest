@@ -1,5 +1,7 @@
+import 'package:assignmenttest/utils/constants/colors.dart';
+import 'package:assignmenttest/utils/constants/sizes.dart';
+import 'package:assignmenttest/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
-import '../../utils/string_constants.dart';
 import '../widgets/category_widget.dart';
 import '../widgets/custom_appbar.dart';
 import '../widgets/recently_ordered_widget.dart';
@@ -15,32 +17,32 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        title: appTitle,
+        title: MyTexts.appName,
         onLogoutPressed: () {
-          print('Logout pressed');
+          debugPrint('Logout pressed');
         },
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Colors.red.withOpacity(0.2),
-          padding: const EdgeInsets.all(defaultPadding),
+          color: MyColors.primary.withOpacity(0.2),
+          padding: const EdgeInsets.all(MySizes.md),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               searchBarWidget(),
-              const SizedBox(height: spacing),
+              const SizedBox(height: MySizes.md),
               const ImageBannerList(),
-              const SizedBox(height: spacing),
+              const SizedBox(height: MySizes.md),
               const CategoryWidget(),
-              const SizedBox(height: spacing),
+              const SizedBox(height: MySizes.md),
               const RecentlyOrderedWidget(),
-              const SizedBox(height: spacing),
-              const VerticalProductList(), // Remove Expanded here
+              const SizedBox(height: MySizes.md),
+              const ProductList(), // Remove Expanded here
             ],
           ),
         ),
       ),
-      bottomNavigationBar: const MiniCartNudge(), // Add MiniCartNudge to HomePage
+      bottomNavigationBar: const MiniCartNudge(),
     );
   }
 }

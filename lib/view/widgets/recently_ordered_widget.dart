@@ -1,8 +1,11 @@
+import 'package:assignmenttest/utils/constants/sizes.dart';
+import 'package:assignmenttest/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../models/models.dart';
 import '../../providers/notifiers/cart_state_notifier.dart';
 import '../../providers/providers.dart';
+import '../../utils/constants/colors.dart';
 import '../screens/product_detail_page.dart';
 
 class RecentlyOrderedWidget extends ConsumerWidget {
@@ -10,39 +13,38 @@ class RecentlyOrderedWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final cart = ref.watch(cartProvider);
-
     final productsAsyncValue = ref.watch(
         homeViewModelProvider.select((state) => state.horizontalProducts));
     return productsAsyncValue.when(
       data: (products) {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Padding(
-              padding: EdgeInsets.only(bottom: 8.0),
-              child: Text(
-                'Recently Ordered',
-                style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-              ),
-            ),
-            SizedBox(
-              height: 200,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: products
-                    .map((product) => ProductCard(product: product))
-                    .toList(),
-              ),
-            ),
-          ],
-        );
+        return _buildProductListWidget(products,context);
       },
       loading: () => const Center(child: CircularProgressIndicator()),
       error: (error, stack) => Center(child: Text('Error: $error')),
+    );
+  }
+
+  Widget _buildProductListWidget(List<ProductModel> products,BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+         Padding(
+          padding: const EdgeInsets.only(bottom: MySizes.sm),
+          child: Text(
+            MyTexts.recentlyOrdered,
+            style: Theme.of(context).textTheme.titleSmall, // Uses the titleLarge style
+          ),
+        ),
+        SizedBox(
+          height: 200,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: products
+                .map((product) => ProductCard(product: product))
+                .toList(),
+          ),
+        ),
+      ],
     );
   }
 }
@@ -58,12 +60,12 @@ class ProductCard extends ConsumerWidget {
     final isInCart = cart.items.any((item) => item.id == product.id);
     final quantity = cart.items.where((item) => item.id == product.id).length;
     return Padding(
-      padding: const EdgeInsets.only(right: 8.0),
+      padding: const EdgeInsets.only(right: MySizes.sm),
       child: Container(
         width: MediaQuery.of(context).size.width / 3.3,
         decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(8.0),
+          color: MyColors.secondary,
+          borderRadius: BorderRadius.circular(MySizes.borderRadiusMd),
           boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.3),
@@ -102,22 +104,19 @@ class ProductCard extends ConsumerWidget {
                   children: [
                     Text(
                       product.name,
-                      style: const TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.normal,
-                          color: Colors.black),
+                      style: Theme.of(context).textTheme.headlineSmall, // Uses the titleLarge style
                       overflow: TextOverflow.ellipsis,
                     ),
-                    const SizedBox(height: 4),
+                    const SizedBox(height: MySizes.xs),
                     Text(
                       product.weight,
-                      style: const TextStyle(fontSize: 10, color: Colors.grey),
+                      style: Theme.of(context).textTheme.bodySmall, // Uses the titleLarge style
                       overflow: TextOverflow.ellipsis,
                     ),
-                    const SizedBox(height: 4),
+                    const SizedBox(height:MySizes.xs),
                     Text(
                       product.price,
-                      style: const TextStyle(fontSize: 10, color: Colors.grey),
+                      style: Theme.of(context).textTheme.bodySmall, // Uses the titleLarge style
                       overflow: TextOverflow.ellipsis,
                     ),
                   ],
@@ -155,7 +154,7 @@ class ProductCard extends ConsumerWidget {
                   child: const SizedBox(
                     child: Center(
                       child: Text(
-                        'Add to Cart',
+                        MyTexts.addToCart,
                         style: TextStyle(color: Colors.white),
                       ),
                     ),

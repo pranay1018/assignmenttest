@@ -1,4 +1,7 @@
+import 'package:assignmenttest/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+
+import '../../utils/constants/colors.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -16,10 +19,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.green,
+      backgroundColor: MyColors.primary,
       leading: const Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Icon(Icons.person, color: Colors.white),
+        padding: EdgeInsets.all(MySizes.md),
+        child: Icon(Icons.person, color: MyColors.secondary),
       ),
       centerTitle: true,
       title: Text(
@@ -32,7 +35,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         IconButton(
-          icon: const Icon(Icons.logout, color: Colors.white),
+          icon: const Icon(Icons.logout, color: MyColors.secondary),
           onPressed: onLogoutPressed,
         ),
       ],

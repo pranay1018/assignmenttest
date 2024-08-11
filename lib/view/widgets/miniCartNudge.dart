@@ -11,17 +11,36 @@ class MiniCartNudge extends ConsumerWidget {
 
     if (cart.itemCount > 0) {
       return Container(
-        height: 60,
-        color: Colors.grey.shade200,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text('Items in Cart: ${cart.itemCount}'),
-              Text('Total: \$${cart.totalPrice.toStringAsFixed(2)}'),
-            ],
-          ),
+        height: 70,
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.shade300,
+              blurRadius: 8.0,
+            ),
+          ],
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Items in Cart: ${cart.itemCount}',
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              'Total: \$${cart.totalPrice.toStringAsFixed(2)}',
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Colors.green,
+              ),
+            ),
+          ],
         ),
       );
     } else {

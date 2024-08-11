@@ -1,3 +1,4 @@
+import 'package:assignmenttest/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:assignmenttest/view/screens/home_page.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -11,11 +12,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ProviderScope(
+    return  ProviderScope(
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: HomePage(),
+        themeMode: ThemeMode.system,
+        theme: MyAppTheme.lightTheme,
+        darkTheme: MyAppTheme.dartTheme,
+        home: const HomePage(),
       ),
     );
   }
 }
+

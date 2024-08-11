@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'dart:async';
-
 import '../../providers/providers.dart';
+import '../../utils/constants/sizes.dart';
 
 class ImageBannerList extends ConsumerStatefulWidget {
   const ImageBannerList({super.key});
@@ -44,16 +44,12 @@ class ImageBannerListState extends ConsumerState<ImageBannerList> {
 
   @override
   Widget build(BuildContext context) {
-    final bannersAsyncValue =
-        ref.watch(homeViewModelProvider.select((state) => state.banners));
-
+    final bannersAsyncValue = ref.watch(homeViewModelProvider.select((state) => state.banners));
     return bannersAsyncValue.when(
       data: (banners) {
-        // Ensure we have 3 banners
         final limitedBanners = banners.take(3).toList();
         return SizedBox(
-          height:
-              MediaQuery.of(context).size.width * (2 / 3), // Aspect ratio 2:3
+          height: MediaQuery.of(context).size.width * (2 / 3), // Aspect ratio 2:3
           child: PageView.builder(
             controller: _pageController,
             itemCount: limitedBanners.length,
@@ -61,7 +57,7 @@ class ImageBannerListState extends ConsumerState<ImageBannerList> {
             itemBuilder: (context, index) {
               final banner = limitedBanners[index];
               return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                padding: const EdgeInsets.symmetric(horizontal: MySizes.xs),
                 child: buildBanner(banner.imageUrl),
               );
             },
@@ -75,13 +71,13 @@ class ImageBannerListState extends ConsumerState<ImageBannerList> {
 
   Widget buildBanner(String imageUrl) {
     return Container(
-      padding: const EdgeInsets.only(right: 8.0),
+      padding: const EdgeInsets.only(right: MySizes.sm),
       decoration: BoxDecoration(
         image: DecorationImage(
           image: NetworkImage(imageUrl),
           fit: BoxFit.cover,
         ),
-        borderRadius: BorderRadius.circular(8.0),
+        borderRadius: BorderRadius.circular(MySizes.borderRadiusMd),
       ),
     );
   }
