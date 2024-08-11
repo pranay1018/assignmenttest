@@ -2,72 +2,72 @@
   "banners": [
     {
       "id": 1,
-      "image_url": "https://via.placeholder.com/600x400.png?text=Banner+1"
+      "image_url": "https://img.freepik.com/premium-psd/vegetable-grocery-delivery-promotion-web-banner-facebook-cover-instagram-template_502896-109.jpg?w=1800"
     },
     {
       "id": 2,
-      "image_url": "https://via.placeholder.com/600x400.png?text=Banner+2"
+      "image_url": "https://img.freepik.com/free-vector/merry-christmas-watercolor-banner_52683-78028.jpg?t=st=1723361108~exp=1723364708~hmac=24a1479af83642297b4ec967f5f0dbf77d67da1b547a96d6bfdcd4496dc70093&w=1480"
     },
     {
       "id": 3,
-      "image_url": "https://via.placeholder.com/600x400.png?text=Banner+3"
+      "image_url": "https://img.freepik.com/premium-psd/vegetable-grocery-delivery-promotion-web-banner-facebook-cover-instagram-template_502896-109.jpg?w=1800"
     }
   ],
   "categories": [
     {
       "id": 1,
       "name": "Vegetables",
-      "image_url": "https://via.placeholder.com/48.png?text=Veg"
+      "image_url": "https://media.gettyimages.com/id/1247073860/photo/healthy-fresh-organic-vegetables-in-a-crate-isolated-on-white-background.jpg?s=1024x1024&w=gi&k=20&c=Mqyx0C5Ks16kf_6h8NLrtITTpkYS_9dhU0ni5-hsa6Y="
     },
     {
       "id": 2,
       "name": "Fruits",
-      "image_url": "https://via.placeholder.com/48.png?text=Fruits"
+      "image_url": "https://getwallpapers.com/wallpaper/full/f/e/7/1019356-download-free-fruit-wallpaper-1920x1200-for-lockscreen.jpg"
     },
     {
       "id": 3,
       "name": "Fresh Juice Items",
-      "image_url": "https://via.placeholder.com/48.png?text=Juice"
+      "image_url": "https://img.freepik.com/free-photo/red-yellow-juice-mason-jars-with-drinking-straws-fresh-fruits-against-pink-background_23-2147968644.jpg?t=st=1723361991~exp=1723365591~hmac=973bed0e4eb7974ddb08c96b6dfcc2fb6e9f6d6b7c606bf6ff3cfb2dd93962e8&w=1480"
     },
     {
       "id": 4,
       "name": "Combos",
-      "image_url": "https://via.placeholder.com/48.png?text=Combos"
+      "image_url": "https://getwallpapers.com/wallpaper/full/f/e/7/1019356-download-free-fruit-wallpaper-1920x1200-for-lockscreen.jpg"
     },
     {
       "id": 5,
       "name": "Pure Produced Items",
-      "image_url": "https://via.placeholder.com/48.png?text=Produced"
+      "image_url": "https://media.gettyimages.com/id/1247073860/photo/healthy-fresh-organic-vegetables-in-a-crate-isolated-on-white-background.jpg?s=1024x1024&w=gi&k=20&c=Mqyx0C5Ks16kf_6h8NLrtITTpkYS_9dhU0ni5-hsa6Y="
     }
   ],
   "horizontal_products": [
     {
       "id": 1,
-      "name": "Product 1",
+      "name": "Apple",
       "weight": "500g",
       "price": "$10",
-      "image_url": "https://via.placeholder.com/96.png?text=Product+1"
+      "image_url": "https://media.istockphoto.com/id/185262648/photo/red-apple-with-leaf-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=Cls30uVAjNB0B_xKbBC2Yu5aM4AB5fGmW7rqLphx3b0="
     },
     {
       "id": 2,
-      "name": "Product 2",
+      "name": "Mangos",
       "weight": "250g",
       "price": "$5",
-      "image_url": "https://via.placeholder.com/96.png?text=Product+2"
+      "image_url": "https://media.istockphoto.com/id/168370138/photo/mango.jpg?s=1024x1024&w=is&k=20&c=HBXIjdVwjydQmINVBRCxeVivTdejyHsZPgVWLiniGRM="
     },
     {
       "id": 3,
-      "name": "Product 3",
+      "name": "Onions",
       "weight": "1kg",
       "price": "$20",
-      "image_url": "https://via.placeholder.com/96.png?text=Product+3"
+      "image_url": "https://media.istockphoto.com/id/1008443606/photo/red-onions.jpg?s=1024x1024&w=is&k=20&c=OabAhyag7nBjECZ2YH-3_ukqiYvO7i6FUAEvpW4IAo8="
     },
     {
       "id": 4,
-      "name": "Product 4",
+      "name": "Carrot",
       "weight": "300g",
       "price": "$7",
-      "image_url": "https://via.placeholder.com/96.png?text=Product+4"
+      "image_url": "https://media.istockphoto.com/id/1157946850/photo/carrot-isolated-on-white.jpg?s=1024x1024&w=is&k=20&c=nw0iesQyZYl8aPwgDznDLGjMHaxjM6s0mBw4ybe5StI="
     },
     {
       "id": 5,
@@ -83,35 +83,35 @@
       "name": "Product 1",
       "weight": "500g",
       "price": "$10",
-      "image_url": "https://via.placeholder.com/96.png?text=Product+1"
+      "image_url": "https://media.istockphoto.com/id/1091697242/photo/bio-food-garden-produce-and-harvested-vegetable-fresh-farm-vegetables-in-wooden-box.jpg?s=1024x1024&w=is&k=20&c=X0bDypcai7aWVVG6ncRcRe1fj78b-y0X7oWIZ1KeTEo="
     },
     {
       "id": 2,
       "name": "Product 2",
       "weight": "250g",
       "price": "$5",
-      "image_url": "https://via.placeholder.com/96.png?text=Product+2"
+      "image_url": "https://media.istockphoto.com/id/1091697242/photo/bio-food-garden-produce-and-harvested-vegetable-fresh-farm-vegetables-in-wooden-box.jpg?s=1024x1024&w=is&k=20&c=X0bDypcai7aWVVG6ncRcRe1fj78b-y0X7oWIZ1KeTEo="
     },
     {
       "id": 3,
       "name": "Product 3",
       "weight": "1kg",
       "price": "$20",
-      "image_url": "https://via.placeholder.com/96.png?text=Product+3"
+      "image_url": "https://media.istockphoto.com/id/1091697242/photo/bio-food-garden-produce-and-harvested-vegetable-fresh-farm-vegetables-in-wooden-box.jpg?s=1024x1024&w=is&k=20&c=X0bDypcai7aWVVG6ncRcRe1fj78b-y0X7oWIZ1KeTEo="
     },
     {
       "id": 4,
       "name": "Product 4",
       "weight": "300g",
       "price": "$7",
-      "image_url": "https://via.placeholder.com/96.png?text=Product+4"
+      "image_url": "https://media.istockphoto.com/id/1091697242/photo/bio-food-garden-produce-and-harvested-vegetable-fresh-farm-vegetables-in-wooden-box.jpg?s=1024x1024&w=is&k=20&c=X0bDypcai7aWVVG6ncRcRe1fj78b-y0X7oWIZ1KeTEo="
     },
     {
       "id": 5,
       "name": "Product 5",
       "weight": "750g",
       "price": "$15",
-      "image_url": "https://via.placeholder.com/96.png?text=Product+5"
+      "image_url": "https://media.istockphoto.com/id/1091697242/photo/bio-food-garden-produce-and-harvested-vegetable-fresh-farm-vegetables-in-wooden-box.jpg?s=1024x1024&w=is&k=20&c=X0bDypcai7aWVVG6ncRcRe1fj78b-y0X7oWIZ1KeTEo="
     }
   ],
   "product_detail": {

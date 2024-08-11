@@ -1,8 +1,11 @@
+import 'package:assignmenttest/view/widgets/category_widget.dart';
+import 'package:assignmenttest/view/widgets/horizontal_product_list_widget.dart';
 import 'package:flutter/material.dart';
-import '../widgets/category_list.dart';
-import '../widgets/image_banner.dart';
+import '../../utils/string_constants.dart';
+import '../widgets/image_banner_widget.dart';
 import '../widgets/search_bar.dart';
-
+import '../widgets/vertical_product_list.dart';
+import '../widgets/custom_appbar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,44 +13,30 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        leading: const Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Icon(Icons.person, color: Colors.white),
-        ),
-        centerTitle: true,
-        title: const Text('Shoppido',
-          style: TextStyle(
-            fontSize: 16,
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.all(16.0),
-            child: Icon(Icons.logout, color: Colors.white),
-          ),
-        ],
+      appBar: CustomAppBar(
+        title: appTitle,
+        onLogoutPressed: () {
+          print('Logout pressed');
+        },
       ),
-      body:  Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Search Bar
-            searchBar(),
-            const SizedBox(height: 16),
-            // Image Banners
-            const ImageBannerList(),
-            const SizedBox(height: 16),
-            // Category List
-            const CategoryList(),
-            const SizedBox(height: 16),
-            // // Horizontal Products List
-
-          ],
+      body: SingleChildScrollView(
+        child: Container(
+        color: Colors.red.withOpacity(0.2),
+          padding: const EdgeInsets.all(defaultPadding),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              searchBarWidget(),
+              const SizedBox(height: spacing),
+              const ImageBannerList(),
+              const SizedBox(height: spacing),
+              const CategoryWidget(),
+              const SizedBox(height: spacing),
+              const HorizontalProductListWidget(),
+              const SizedBox(height: spacing),
+              const VerticalProductList(), // Remove Expanded here
+            ],
+          ),
         ),
       ),
     );

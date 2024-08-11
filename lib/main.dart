@@ -1,8 +1,9 @@
-import 'package:assignmenttest/view/screens/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:assignmenttest/view/screens/home_page.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,9 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
+    return const ProviderScope(
+      child: MaterialApp(
+        home: HomePage(),
+      ),
     );
   }
 }
-
