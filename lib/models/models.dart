@@ -1,3 +1,5 @@
+//HomeScreen Models class
+
 class BannerModel {
   final String imageUrl;
 
@@ -25,50 +27,34 @@ class CategoryModel {
 }
 
 class ProductModel {
+  final int id;
   final String imageUrl;
   final String name;
   final String weight;
   final String price;
+  final String description;
 
   ProductModel({
+    required this.id,
     required this.imageUrl,
     required this.name,
     required this.weight,
     required this.price,
+    required this.description,
   });
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(
+      id: json['id'],
       imageUrl: json['image_url'],
       name: json['name'],
       weight: json['weight'],
       price: json['price'],
+      description: json['description'],
     );
   }
-}
 
 
-class VerticalProductModel {
-  final String imageUrl;
-  final String name;
-  final String weight;
-  final String price;
-
-  VerticalProductModel({
-    required this.imageUrl,
-    required this.name,
-    required this.weight,
-    required this.price,
-  });
-
-  factory VerticalProductModel.fromJson(Map<String, dynamic> json) {
-    return VerticalProductModel(
-      imageUrl: json['image_url'],
-      name: json['name'],
-      weight: json['weight'],
-      price: json['price'],
-    );
-  }
 }
 
 

@@ -1,11 +1,12 @@
-import 'package:assignmenttest/view/widgets/category_widget.dart';
-import 'package:assignmenttest/view/widgets/horizontal_product_list_widget.dart';
 import 'package:flutter/material.dart';
 import '../../utils/string_constants.dart';
+import '../widgets/category_widget.dart';
+import '../widgets/custom_appbar.dart';
+import '../widgets/recently_ordered_widget.dart';
 import '../widgets/image_banner_widget.dart';
+import '../widgets/miniCartNudge.dart';
 import '../widgets/search_bar.dart';
 import '../widgets/vertical_product_list.dart';
-import '../widgets/custom_appbar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-        color: Colors.red.withOpacity(0.2),
+          color: Colors.red.withOpacity(0.2),
           padding: const EdgeInsets.all(defaultPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,13 +33,14 @@ class HomePage extends StatelessWidget {
               const SizedBox(height: spacing),
               const CategoryWidget(),
               const SizedBox(height: spacing),
-              const HorizontalProductListWidget(),
+              const RecentlyOrderedWidget(),
               const SizedBox(height: spacing),
               const VerticalProductList(), // Remove Expanded here
             ],
           ),
         ),
       ),
+      bottomNavigationBar: const MiniCartNudge(), // Add MiniCartNudge to HomePage
     );
   }
 }

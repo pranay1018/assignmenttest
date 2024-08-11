@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../utils/string_constants.dart';
-import '../../view_model/home_view_model.dart';
+import '../../providers/providers.dart';
 
 class CategoryWidget extends ConsumerWidget {
   const CategoryWidget({super.key});

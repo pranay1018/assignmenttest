@@ -40,12 +40,13 @@
       "image_url": "https://media.gettyimages.com/id/1247073860/photo/healthy-fresh-organic-vegetables-in-a-crate-isolated-on-white-background.jpg?s=1024x1024&w=gi&k=20&c=Mqyx0C5Ks16kf_6h8NLrtITTpkYS_9dhU0ni5-hsa6Y="
     }
   ],
-  "horizontal_products": [
+  "recently_ordered": [
     {
       "id": 1,
       "name": "Apple",
       "weight": "500g",
       "price": "$10",
+      "description": "Fresh, juicy apples that are perfect for snacking or baking.",
       "image_url": "https://media.istockphoto.com/id/185262648/photo/red-apple-with-leaf-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=Cls30uVAjNB0B_xKbBC2Yu5aM4AB5fGmW7rqLphx3b0="
     },
     {
@@ -53,75 +54,160 @@
       "name": "Mangos",
       "weight": "250g",
       "price": "$5",
+      "description": "Sweet and ripe mangos, ideal for smoothies and desserts.",
       "image_url": "https://media.istockphoto.com/id/168370138/photo/mango.jpg?s=1024x1024&w=is&k=20&c=HBXIjdVwjydQmINVBRCxeVivTdejyHsZPgVWLiniGRM="
     },
     {
       "id": 3,
-      "name": "Onions",
+      "name": "Red Onions",
       "weight": "1kg",
       "price": "$20",
+      "description": "Flavorful red onions for cooking and seasoning.",
       "image_url": "https://media.istockphoto.com/id/1008443606/photo/red-onions.jpg?s=1024x1024&w=is&k=20&c=OabAhyag7nBjECZ2YH-3_ukqiYvO7i6FUAEvpW4IAo8="
     },
     {
       "id": 4,
-      "name": "Carrot",
+      "name": "Carrots",
       "weight": "300g",
       "price": "$7",
+      "description": "Crunchy carrots that are great for salads and snacks.",
       "image_url": "https://media.istockphoto.com/id/1157946850/photo/carrot-isolated-on-white.jpg?s=1024x1024&w=is&k=20&c=nw0iesQyZYl8aPwgDznDLGjMHaxjM6s0mBw4ybe5StI="
     },
     {
       "id": 5,
-      "name": "Product 5",
+      "name": "Mixed Greens",
       "weight": "750g",
       "price": "$15",
+      "description": "A mix of fresh greens ideal for salads and cooking.",
       "image_url": "https://via.placeholder.com/96.png?text=Product+5"
     }
   ],
-  "vertical_products": [
+  "products": [
     {
-      "id": 1,
-      "name": "Product 1",
+      "id": 6,
+      "name": "Organic Cherry Tomatoes",
       "weight": "500g",
       "price": "$10",
+      "description": "These organic cherry tomatoes are fresh, juicy, and perfect for salads or snacking. Grown with care, they offer a burst of flavor and essential nutrients.",
       "image_url": "https://media.istockphoto.com/id/1091697242/photo/bio-food-garden-produce-and-harvested-vegetable-fresh-farm-vegetables-in-wooden-box.jpg?s=1024x1024&w=is&k=20&c=X0bDypcai7aWVVG6ncRcRe1fj78b-y0X7oWIZ1KeTEo="
     },
     {
-      "id": 2,
-      "name": "Product 2",
+      "id": 7,
+      "name": "Golden Pineapples",
       "weight": "250g",
       "price": "$5",
+      "description": "Sweet golden pineapples, perfect for tropical dishes and snacks.",
       "image_url": "https://media.istockphoto.com/id/1091697242/photo/bio-food-garden-produce-and-harvested-vegetable-fresh-farm-vegetables-in-wooden-box.jpg?s=1024x1024&w=is&k=20&c=X0bDypcai7aWVVG6ncRcRe1fj78b-y0X7oWIZ1KeTEo="
     },
     {
-      "id": 3,
-      "name": "Product 3",
+      "id": 8,
+      "name": "Sweet Potatoes",
       "weight": "1kg",
       "price": "$20",
+      "description": "Nutritious sweet potatoes that are great for baking and cooking.",
       "image_url": "https://media.istockphoto.com/id/1091697242/photo/bio-food-garden-produce-and-harvested-vegetable-fresh-farm-vegetables-in-wooden-box.jpg?s=1024x1024&w=is&k=20&c=X0bDypcai7aWVVG6ncRcRe1fj78b-y0X7oWIZ1KeTEo="
     },
     {
-      "id": 4,
-      "name": "Product 4",
+      "id": 9,
+      "name": "Baby Carrots",
       "weight": "300g",
       "price": "$7",
+      "description": "Tender baby carrots that are ideal for snacking or cooking.",
       "image_url": "https://media.istockphoto.com/id/1091697242/photo/bio-food-garden-produce-and-harvested-vegetable-fresh-farm-vegetables-in-wooden-box.jpg?s=1024x1024&w=is&k=20&c=X0bDypcai7aWVVG6ncRcRe1fj78b-y0X7oWIZ1KeTEo="
     },
     {
-      "id": 5,
-      "name": "Product 5",
+      "id": 10,
+      "name": "Herb Mix",
       "weight": "750g",
       "price": "$15",
+      "description": "A blend of fresh herbs for seasoning and flavoring your dishes.",
       "image_url": "https://media.istockphoto.com/id/1091697242/photo/bio-food-garden-produce-and-harvested-vegetable-fresh-farm-vegetables-in-wooden-box.jpg?s=1024x1024&w=is&k=20&c=X0bDypcai7aWVVG6ncRcRe1fj78b-y0X7oWIZ1KeTEo="
     }
   ],
-  "product_detail": {
-    "id": 1,
-    "name": "Product 1",
-    "weight": "500g",
-    "price": "$10",
-    "description": "This is a detailed description of Product 1. It provides all the necessary information about the product, including its benefits and features.",
-    "image_url": "https://via.placeholder.com/600x400.png?text=Product+1+Detail"
-  },
+  "product_detail": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "weight": "500g",
+      "price": "$10",
+      "description": "Fresh, juicy apples that are perfect for snacking or baking.",
+      "image_url": "https://media.istockphoto.com/id/185262648/photo/red-apple-with-leaf-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=Cls30uVAjNB0B_xKbBC2Yu5aM4AB5fGmW7rqLphx3b0="
+    },
+    {
+      "id": 2,
+      "name": "Mangos",
+      "weight": "250g",
+      "price": "$5",
+      "description": "Sweet and ripe mangos, ideal for smoothies and desserts.",
+      "image_url": "https://media.istockphoto.com/id/168370138/photo/mango.jpg?s=1024x1024&w=is&k=20&c=HBXIjdVwjydQmINVBRCxeVivTdejyHsZPgVWLiniGRM="
+    },
+    {
+      "id": 3,
+      "name": "Red Onions",
+      "weight": "1kg",
+      "price": "$20",
+      "description": "Flavorful red onions for cooking and seasoning.",
+      "image_url": "https://media.istockphoto.com/id/1008443606/photo/red-onions.jpg?s=1024x1024&w=is&k=20&c=OabAhyag7nBjECZ2YH-3_ukqiYvO7i6FUAEvpW4IAo8="
+    },
+    {
+      "id": 4,
+      "name": "Carrots",
+      "weight": "300g",
+      "price": "$7",
+      "description": "Crunchy carrots that are great for salads and snacks.",
+      "image_url": "https://media.istockphoto.com/id/1157946850/photo/carrot-isolated-on-white.jpg?s=1024x1024&w=is&k=20&c=nw0iesQyZYl8aPwgDznDLGjMHaxjM6s0mBw4ybe5StI="
+    },
+    {
+      "id": 5,
+      "name": "Mixed Greens",
+      "weight": "750g",
+      "price": "$15",
+      "description": "A mix of fresh greens ideal for salads and cooking.",
+      "image_url": "https://via.placeholder.com/96.png?text=Product+5"
+    },
+
+
+    {
+      "id": 6,
+      "name": "Organic Cherry Tomatoes",
+      "weight": "500g",
+      "price": "$10",
+      "description": "These organic cherry tomatoes are fresh, juicy, and perfect for salads or snacking. Grown with care, they offer a burst of flavor and essential nutrients.",
+      "image_url": "https://media.istockphoto.com/id/1091697242/photo/bio-food-garden-produce-and-harvested-vegetable-fresh-farm-vegetables-in-wooden-box.jpg?s=1024x1024&w=is&k=20&c=X0bDypcai7aWVVG6ncRcRe1fj78b-y0X7oWIZ1KeTEo="
+    },
+    {
+      "id": 7,
+      "name": "Golden Pineapples",
+      "weight": "250g",
+      "price": "$5",
+      "description": "Sweet golden pineapples, perfect for tropical dishes and snacks.",
+      "image_url": "https://media.istockphoto.com/id/1091697242/photo/bio-food-garden-produce-and-harvested-vegetable-fresh-farm-vegetables-in-wooden-box.jpg?s=1024x1024&w=is&k=20&c=X0bDypcai7aWVVG6ncRcRe1fj78b-y0X7oWIZ1KeTEo="
+    },
+    {
+      "id": 8,
+      "name": "Sweet Potatoes",
+      "weight": "1kg",
+      "price": "$20",
+      "description": "Nutritious sweet potatoes that are great for baking and cooking.",
+      "image_url": "https://media.istockphoto.com/id/1091697242/photo/bio-food-garden-produce-and-harvested-vegetable-fresh-farm-vegetables-in-wooden-box.jpg?s=1024x1024&w=is&k=20&c=X0bDypcai7aWVVG6ncRcRe1fj78b-y0X7oWIZ1KeTEo="
+    },
+    {
+      "id": 9,
+      "name": "Baby Carrots",
+      "weight": "300g",
+      "price": "$7",
+      "description": "Tender baby carrots that are ideal for snacking or cooking.",
+      "image_url": "https://media.istockphoto.com/id/1091697242/photo/bio-food-garden-produce-and-harvested-vegetable-fresh-farm-vegetables-in-wooden-box.jpg?s=1024x1024&w=is&k=20&c=X0bDypcai7aWVVG6ncRcRe1fj78b-y0X7oWIZ1KeTEo="
+    },
+    {
+      "id": 10,
+      "name": "Herb Mix",
+      "weight": "750g",
+      "price": "$15",
+      "description": "A blend of fresh herbs for seasoning and flavoring your dishes.",
+      "image_url": "https://media.istockphoto.com/id/1091697242/photo/bio-food-garden-produce-and-harvested-vegetable-fresh-farm-vegetables-in-wooden-box.jpg?s=1024x1024&w=is&k=20&c=X0bDypcai7aWVVG6ncRcRe1fj78b-y0X7oWIZ1KeTEo="
+    }
+  ],
   "mini_cart_nudge": {
     "items_in_cart": 2,
     "total_price": "$15"

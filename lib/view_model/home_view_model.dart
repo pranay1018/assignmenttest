@@ -1,14 +1,14 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../models/porduct.dart';
+import '../models/models.dart';
 import '../repository/home_repository.dart'; // Import your VerticalProductModel
 
 class HomeViewModel extends StateNotifier<HomeState> {
   HomeViewModel(this._repository) : super(HomeState.initial()) {
     _fetchBanners();
     _fetchCategories();
-    _fetchHorizontalProducts();
-    _fetchVerticalProducts();
+    _fetchRecentlyOrderedProducts();
+    _fetchProducts();
   }
 
   final HomeRepository _repository;
@@ -33,20 +33,20 @@ class HomeViewModel extends StateNotifier<HomeState> {
     }
   }
 
-  Future<void> _fetchHorizontalProducts() async {
+  Future<void> _fetchRecentlyOrderedProducts() async {
     state = state.copyWith(horizontalProducts: const AsyncValue.loading());
     try {
-      final products = await _repository.fetchHorizontalProducts();
+      final products = await _repository.fetchRecentlyOrderedProducts();
       state = state.copyWith(horizontalProducts: AsyncValue.data(products));
     } catch (e) {
       state = state.copyWith(categories: AsyncValue.error(e,StackTrace.current));
     }
   }
 
-  Future<void> _fetchVerticalProducts() async {
+  Future<void> _fetchProducts() async {
     state = state.copyWith(verticalProducts: const AsyncValue.loading());
     try {
-      final products = await _repository.fetchVerticalProducts();
+      final products = await _repository.fetchProducts();
       state = state.copyWith(verticalProducts: AsyncValue.data(products));
     } catch (e) {
       state = state.copyWith(categories: AsyncValue.error(e,StackTrace.current));
@@ -58,7 +58,7 @@ class HomeState {
   final AsyncValue<List<BannerModel>> banners;
   final AsyncValue<List<CategoryModel>> categories;
   final AsyncValue<List<ProductModel>> horizontalProducts;
-  final AsyncValue<List<VerticalProductModel>> verticalProducts;
+  final AsyncValue<List<ProductModel>> verticalProducts;
 
   HomeState({
     required this.banners,
@@ -80,7 +80,7 @@ class HomeState {
     AsyncValue<List<BannerModel>>? banners,
     AsyncValue<List<CategoryModel>>? categories,
     AsyncValue<List<ProductModel>>? horizontalProducts,
-    AsyncValue<List<VerticalProductModel>>? verticalProducts,
+    AsyncValue<List<ProductModel>>? verticalProducts,
   }) {
     return HomeState(
       banners: banners ?? this.banners,
@@ -91,7 +91,4 @@ class HomeState {
   }
 }
 
-final homeViewModelProvider = StateNotifierProvider<HomeViewModel, HomeState>((ref) {
-  final repository = HomeRepository();
-  return HomeViewModel(repository);
-});
+

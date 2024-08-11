@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/string_constants.dart';
-
 Widget searchBarWidget() {
   return TextField(
     decoration: InputDecoration(
