@@ -1,0 +1,129 @@
+{
+  "banners": [
+    {
+      "id": 1,
+      "image_url": "https://via.placeholder.com/600x400.png?text=Banner+1"
+    },
+    {
+      "id": 2,
+      "image_url": "https://via.placeholder.com/600x400.png?text=Banner+2"
+    },
+    {
+      "id": 3,
+      "image_url": "https://via.placeholder.com/600x400.png?text=Banner+3"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Vegetables",
+      "image_url": "https://via.placeholder.com/48.png?text=Veg"
+    },
+    {
+      "id": 2,
+      "name": "Fruits",
+      "image_url": "https://via.placeholder.com/48.png?text=Fruits"
+    },
+    {
+      "id": 3,
+      "name": "Fresh Juice Items",
+      "image_url": "https://via.placeholder.com/48.png?text=Juice"
+    },
+    {
+      "id": 4,
+      "name": "Combos",
+      "image_url": "https://via.placeholder.com/48.png?text=Combos"
+    },
+    {
+      "id": 5,
+      "name": "Pure Produced Items",
+      "image_url": "https://via.placeholder.com/48.png?text=Produced"
+    }
+  ],
+  "horizontal_products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "weight": "500g",
+      "price": "$10",
+      "image_url": "https://via.placeholder.com/96.png?text=Product+1"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "weight": "250g",
+      "price": "$5",
+      "image_url": "https://via.placeholder.com/96.png?text=Product+2"
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "weight": "1kg",
+      "price": "$20",
+      "image_url": "https://via.placeholder.com/96.png?text=Product+3"
+    },
+    {
+      "id": 4,
+      "name": "Product 4",
+      "weight": "300g",
+      "price": "$7",
+      "image_url": "https://via.placeholder.com/96.png?text=Product+4"
+    },
+    {
+      "id": 5,
+      "name": "Product 5",
+      "weight": "750g",
+      "price": "$15",
+      "image_url": "https://via.placeholder.com/96.png?text=Product+5"
+    }
+  ],
+  "vertical_products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "weight": "500g",
+      "price": "$10",
+      "image_url": "https://via.placeholder.com/96.png?text=Product+1"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "weight": "250g",
+      "price": "$5",
+      "image_url": "https://via.placeholder.com/96.png?text=Product+2"
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "weight": "1kg",
+      "price": "$20",
+      "image_url": "https://via.placeholder.com/96.png?text=Product+3"
+    },
+    {
+      "id": 4,
+      "name": "Product 4",
+      "weight": "300g",
+      "price": "$7",
+      "image_url": "https://via.placeholder.com/96.png?text=Product+4"
+    },
+    {
+      "id": 5,
+      "name": "Product 5",
+      "weight": "750g",
+      "price": "$15",
+      "image_url": "https://via.placeholder.com/96.png?text=Product+5"
+    }
+  ],
+  "product_detail": {
+    "id": 1,
+    "name": "Product 1",
+    "weight": "500g",
+    "price": "$10",
+    "description": "This is a detailed description of Product 1. It provides all the necessary information about the product, including its benefits and features.",
+    "image_url": "https://via.placeholder.com/600x400.png?text=Product+1+Detail"
+  },
+  "mini_cart_nudge": {
+    "items_in_cart": 2,
+    "total_price": "$15"
+  }
+}
