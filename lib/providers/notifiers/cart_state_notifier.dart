@@ -11,15 +11,41 @@ class CartNotifier extends StateNotifier<Cart> {
     );
   }
 
+  // void removeFromCart(ProductModel product) {
+  //   final updatedItems = List<ProductModel>.from(state.items);
+  //   updatedItems.remove(product);
+  //
+  //   final newTotalPrice = state.totalPrice - product.price.toDouble();
+  //
+  //   // Ensure the total price does not go below zero
+  //   state = state.copyWith(
+  //     items: updatedItems,
+  //     totalPrice: newTotalPrice < 0.0 ? 0.0 : newTotalPrice,
+  //   );
+  // }
+
   void removeFromCart(ProductModel product) {
     final updatedItems = List<ProductModel>.from(state.items);
-    updatedItems.remove(product);
-    state = state.copyWith(
-      items: updatedItems,
-      totalPrice: state.totalPrice - product.price.toDouble(),
-    );
+
+    // Find the first item with the same id as the product.id and remove it
+    final productIndex = updatedItems.indexWhere((item) => item.id == product.id);
+    if (productIndex != -1) {
+      updatedItems.removeAt(productIndex);
+
+      // Calculate the new total price
+        final newTotalPrice = state.totalPrice - product.price.toDouble();
+
+      // Ensure the total price does not go below zero
+      state = state.copyWith(
+        items: updatedItems,
+        totalPrice: newTotalPrice < 0 ? 0 : newTotalPrice,
+      );
+    }
   }
 }
+
+
+
 
 final cartProvider = StateNotifierProvider<CartNotifier, Cart>((ref) {
   return CartNotifier();
@@ -40,7 +66,6 @@ class Cart {
     );
   }
 }
-
 
 extension PriceParsing on String {
   double toDouble() {

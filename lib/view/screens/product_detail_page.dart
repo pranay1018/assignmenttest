@@ -43,6 +43,7 @@ class ProductDetailPage extends ConsumerWidget {
                 _buildPriceAndCartActions(
                   context,
                   product,
+                  ref,
                   isInCart,
                   quantity,
                   cartNotifier,
@@ -98,6 +99,7 @@ class ProductDetailPage extends ConsumerWidget {
   Widget _buildPriceAndCartActions(
       BuildContext context,
       var product,
+      WidgetRef ref,
       bool isInCart,
       int quantity,
       CartNotifier cartNotifier,
@@ -119,7 +121,9 @@ class ProductDetailPage extends ConsumerWidget {
           children: [
             IconButton(
               icon: const Icon(Icons.remove),
-              onPressed: () => cartNotifier.removeFromCart(product),
+              onPressed: () {
+                ref.read(cartProvider.notifier).removeFromCart(product);
+              },
             ),
             Text(
               quantity.toString(),
@@ -130,7 +134,9 @@ class ProductDetailPage extends ConsumerWidget {
             ),
             IconButton(
               icon: const Icon(Icons.add),
-              onPressed: () => cartNotifier.addToCart(product),
+              onPressed: () {
+                ref.read(cartProvider.notifier).addToCart(product);
+              },
             ),
           ],
         )
